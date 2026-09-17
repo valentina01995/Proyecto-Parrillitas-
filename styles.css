@@ -1,0 +1,64 @@
+:root {
+  --color-turquesa: #79c3d1;
+  --color-petroleo: #00545a;
+  --color-negro: #111111;
+  --color-blanco: #ffffff;
+  --color-gris: #f5f5f5;
+  --color-acento: #b9003c;
+  --fuente-principal: Arial, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--fuente-principal); color: var(--color-negro); background: var(--color-blanco); }
+
+.encabezado {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 20px 8%; background: var(--color-blanco);
+}
+.encabezado h1 { color: var(--color-petroleo); margin: 0; }
+.menu { display: flex; gap: 30px; }
+.menu a { color: var(--color-negro); text-decoration: none; font-weight: bold; }
+.menu a:hover { color: var(--color-petroleo); }
+
+section { min-height: 100vh; padding: 80px 10%; }
+#inicio { background: var(--color-turquesa); display: flex; flex-direction: column; justify-content: center; }
+#inicio h2 { font-size: 50px; margin-bottom: 10px; }
+#nosotros, #contacto { background: var(--color-blanco); }
+#servicios { background: var(--color-gris); }
+
+.boton, button {
+  display: inline-block; width: fit-content; padding: 12px 25px;
+  background: var(--color-petroleo); color: var(--color-blanco);
+  border: 0; text-decoration: none; font-weight: bold; cursor: pointer;
+}
+.boton:hover, button:hover { background: var(--color-acento); }
+
+.tarjeta { background: var(--color-blanco); padding: 25px; margin-top: 20px; border-left: 5px solid var(--color-turquesa); }
+form { max-width: 500px; display: flex; flex-direction: column; gap: 10px; }
+input, textarea { width: 100%; padding: 12px; border: 1px solid #ccc; font-family: var(--fuente-principal); }
+textarea { min-height: 120px; }
+footer { background: var(--color-negro); color: var(--color-blanco); text-align: center; padding: 25px; }
+
+/* HERO - DÍA 5 */
+
+#inicio {
+    background-color: var(--color-turquesa);
+    color: var(--color-negro);
+    min-height: 80vh;
+    padding: 80px 10%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#inicio h1 {
+    color: var(--color-petroleo);
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+#inicio p {
+    font-size: 20px;
+}
