@@ -1,64 +1,791 @@
+/*
+================================================
+PARRILLITAS CR
+PROYECTO ACUMULATIVO - DÍAS 1 AL 10
+================================================
+*/
+
+/* ==============================================
+   DÍA 3
+   VARIABLES CSS EN :ROOT
+================================================ */
+
 :root {
-  --color-turquesa: #79c3d1;
-  --color-petroleo: #00545a;
-  --color-negro: #111111;
+
+  --color-fondo: #111111;
+  --color-texto: #eadcc8;
+  --color-acento: #b5522a;
+  --color-turquesa: #d9793b;
+  --color-petroleo: #1f1f1f;
+  --color-gris: #eadcc8;
   --color-blanco: #ffffff;
-  --color-gris: #f5f5f5;
-  --color-acento: #b9003c;
+
   --fuente-principal: Arial, sans-serif;
+
+  --ancho-maximo: 1200px;
+
 }
 
-*, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; font-family: var(--fuente-principal); color: var(--color-negro); background: var(--color-blanco); }
+/* ==============================================
+   DÍA 3
+   BOX MODEL MODERNO
+================================================ */
+
+*,
+*::before,
+*::after {
+
+  box-sizing: border-box;
+
+}
+
+/* ==============================================
+   CONFIGURACIÓN GENERAL
+================================================ */
+
+html {
+
+  scroll-behavior: smooth;
+
+}
+
+body {
+
+  margin: 0;
+  padding: 0;
+
+  font-family: var(--fuente-principal);
+
+  background-color: var(--color-fondo);
+
+  color: var(--color-texto);
+
+  line-height: 1.6;
+
+}
+
+img {
+
+  display: block;
+
+  max-width: 100%;
+
+  height: auto;
+
+}
+
+a {
+
+  text-decoration: none;
+
+}
+
+button,
+input,
+textarea {
+
+  font: inherit;
+
+}
+
+/* ==============================================
+   CONTENEDOR GENERAL
+================================================ */
+
+.contenedor {
+
+  width: 90%;
+
+  max-width: var(--ancho-maximo);
+
+  margin: 0 auto;
+
+}
+
+/* ==============================================
+   DÍA 6
+   NAVEGACIÓN CON FLEXBOX
+================================================ */
 
 .encabezado {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 20px 8%; background: var(--color-blanco);
-}
-.encabezado h1 { color: var(--color-petroleo); margin: 0; }
-.menu { display: flex; gap: 30px; }
-.menu a { color: var(--color-negro); text-decoration: none; font-weight: bold; }
-.menu a:hover { color: var(--color-petroleo); }
 
-section { min-height: 100vh; padding: 80px 10%; }
-#inicio { background: var(--color-turquesa); display: flex; flex-direction: column; justify-content: center; }
-#inicio h2 { font-size: 50px; margin-bottom: 10px; }
-#nosotros, #contacto { background: var(--color-blanco); }
-#servicios { background: var(--color-gris); }
+  width: 100%;
 
-.boton, button {
-  display: inline-block; width: fit-content; padding: 12px 25px;
-  background: var(--color-petroleo); color: var(--color-blanco);
-  border: 0; text-decoration: none; font-weight: bold; cursor: pointer;
-}
-.boton:hover, button:hover { background: var(--color-acento); }
+  padding: 18px 0;
 
-.tarjeta { background: var(--color-blanco); padding: 25px; margin-top: 20px; border-left: 5px solid var(--color-turquesa); }
-form { max-width: 500px; display: flex; flex-direction: column; gap: 10px; }
-input, textarea { width: 100%; padding: 12px; border: 1px solid #ccc; font-family: var(--fuente-principal); }
-textarea { min-height: 120px; }
-footer { background: var(--color-negro); color: var(--color-blanco); text-align: center; padding: 25px; }
+  background-color: var(--color-fondo);
 
-/* HERO - DÍA 5 */
-
-#inicio {
-    background-color: var(--color-turquesa);
-    color: var(--color-negro);
-    min-height: 80vh;
-    padding: 80px 10%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
-#inicio h1 {
-    color: var(--color-petroleo);
-    font-size: 55px;
-    margin-bottom: 10px;
+.navbar {
+
+  width: 90%;
+
+  max-width: var(--ancho-maximo);
+
+  margin: 0 auto;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 18px;
+
 }
 
-#inicio p {
-    font-size: 20px;
+/* ==============================================
+   LOGO
+================================================ */
+
+.logo-enlace {
+
+  display: block;
+
+  flex-shrink: 0;
+
+}
+
+.logo {
+
+  width: 160px;
+
+  height: auto;
+
+  object-fit: contain;
+
+}
+
+/* ==============================================
+   DÍA 6
+   MENÚ FLEXBOX
+
+   DÍA 8
+   CSS NESTING
+================================================ */
+
+.menu {
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 12px 20px;
+
+
+  & a {
+
+    color: var(--color-texto);
+
+    font-size: 0.95rem;
+
+    font-weight: 700;
+
+    transition: color 0.3s ease;
+
+  }
+
+
+  & a:hover {
+
+    color: var(--color-turquesa);
+
+  }
+
+
+  & a:active {
+
+    color: var(--color-acento);
+
+  }
+
+
+  & a:focus-visible {
+
+    color: var(--color-turquesa);
+
+    outline: 2px solid var(--color-acento);
+
+    outline-offset: 5px;
+
+  }
+
+}
+
+/* ==============================================
+   DÍA 5
+   HERO CON H1 Y P USANDO VARIABLES
+================================================ */
+
+.hero {
+
+  width: 100%;
+
+  min-height: 75vh;
+
+  padding: 60px 0;
+
+  display: flex;
+
+  align-items: center;
+
+  background-color: var(--color-fondo);
+
+  background-image:
+    linear-gradient(
+      rgba(17, 17, 17, 0.45),
+      rgba(17, 17, 17, 0.55)
+    ),
+    url("img/fondo-parrillitas-cr.webp");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+}
+
+.hero-contenido {
+
+  width: 90%;
+
+  max-width: var(--ancho-maximo);
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+}
+
+.hero-texto {
+
+  width: 100%;
+
+  max-width: 600px;
+
+
+  /* DÍA 8 - CSS NESTING */
+
+  & h1 {
+
+    margin: 0 0 20px;
+
+    color: var(--color-texto);
+
+    font-size: clamp(2.7rem, 14vw, 4.5rem);
+
+    line-height: 0.95;
+
+    font-weight: 900;
+
+    letter-spacing: -1px;
+
+  }
+
+  & h1 span {
+
+    display: block;
+
+    color: var(--color-acento);
+
+  }
+
+}
+
+.hero-subtitulo {
+
+  margin: 0 0 15px;
+
+  color: var(--color-turquesa);
+
+  font-size: 0.9rem;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+}
+
+.hero-descripcion {
+
+  max-width: 550px;
+
+  margin: 0 0 35px;
+
+  color: var(--color-gris);
+
+  font-size: 1rem;
+
+}
+
+/* ==============================================
+   BOTONES
+================================================ */
+
+.boton,
+.btn {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 13px 25px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background-color: var(--color-acento);
+
+  color: var(--color-blanco);
+
+  font-size: 1rem;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+
+}
+
+.boton:hover,
+.btn:hover {
+
+  background-color: var(--color-turquesa);
+
+  transform: translateY(-2px);
+
+}
+
+.boton:focus-visible,
+.btn:focus-visible {
+
+  outline: 3px solid var(--color-blanco);
+
+  outline-offset: 4px;
+
+}
+
+/* ==============================================
+   SECCIONES GENERALES
+
+   DÍA 8
+   ORGANIZACIÓN POR COMPONENTES
+   + CSS NESTING
+================================================ */
+
+section {
+
+  padding: 60px 0;
+
+  & h2 {
+
+    margin-top: 0;
+
+    margin-bottom: 20px;
+
+    color: var(--color-texto);
+
+    font-size: clamp(2rem, 8vw, 3rem);
+
+    line-height: 1.1;
+
+  }
+
+  & p {
+
+    color: var(--color-gris);
+
+  }
+
+}
+
+/* ==============================================
+   NOSOTROS
+================================================ */
+
+#nosotros {
+
+  background-color: var(--color-petroleo);
+
+}
+
+#nosotros p {
+
+  max-width: 800px;
+
+}
+
+/* ==============================================
+   SERVICIOS
+================================================ */
+
+#servicios {
+
+  background-color: var(--color-fondo);
+
+}
+
+/* ==============================================
+   DÍA 7
+   TARJETAS DE PRODUCTOS CON CSS GRID
+================================================ */
+
+.tarjetas {
+
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 20px;
+
+  margin-top: 40px;
+
+}
+
+
+/* ==============================================
+   DÍA 7 Y DÍA 8
+   TARJETAS + CSS NESTING
+================================================ */
+
+.tarjeta {
+
+  padding: 30px;
+
+  background-color: var(--color-petroleo);
+
+  border:
+    1px solid rgba(234, 220, 200, 0.12);
+
+  border-radius: 15px;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+
+
+  & h3 {
+
+    margin-top: 0;
+
+    color: var(--color-turquesa);
+
+    font-size: 1.4rem;
+
+  }
+
+
+  & p {
+
+    margin-bottom: 0;
+
+    color: var(--color-gris);
+
+  }
+
+
+  &:hover {
+
+    transform: translateY(-5px);
+
+    border-color: var(--color-acento);
+
+  }
+
+}
+
+/* ==============================================
+   CONTACTO
+================================================ */
+
+#contacto {
+
+  background-color: var(--color-petroleo);
+
+}
+
+/* ==============================================
+   FORMULARIO
+================================================ */
+
+form {
+
+  width: 100%;
+
+  max-width: 700px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 22px;
+
+  margin-top: 30px;
+
+}
+
+
+.campo {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+}
+
+label {
+
+  color: var(--color-texto);
+
+  font-weight: 600;
+
+}
+
+input,
+textarea {
+
+  width: 100%;
+
+  padding: 14px 16px;
+
+  border: 1px solid #555555;
+
+  border-radius: 8px;
+
+  background-color: var(--color-fondo);
+
+  color: var(--color-texto);
+
+  font-family: var(--fuente-principal);
+
+  font-size: 1rem;
+
+}
+
+input:focus,
+textarea:focus {
+
+  outline: 2px solid var(--color-acento);
+
+  outline-offset: 2px;
+
+  border-color: var(--color-acento);
+
+}
+
+textarea {
+
+  min-height: 150px;
+
+  resize: vertical;
+
+}
+
+
+form .btn {
+
+  align-self: flex-start;
+
+}
+
+/* ==============================================
+   FOOTER
+================================================ */
+
+footer {
+
+  padding: 30px 20px;
+
+  background-color: #0a0a0a;
+
+  color: var(--color-gris);
+
+  text-align: center;
+
+}
+
+footer p {
+
+  margin: 0;
+
+}
+
+/* ==============================================
+   DÍA 9
+   RESPONSIVE + MOBILE FIRST
+
+   El diseño anterior corresponde primero
+   a dispositivos móviles.
+
+   A partir de aquí ampliamos el diseño
+   para pantallas mayores.
+================================================ */
+
+/* ==============================================
+   TABLET
+================================================ */
+
+@media (min-width: 600px) {
+
+  .tarjetas {
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+  }
+
+}
+
+/* ==============================================
+   COMPUTADORA
+================================================ */
+
+@media (min-width: 769px) {
+
+
+  /* NAVEGACIÓN */
+
+  .encabezado {
+
+    padding: 20px 0;
+
+  }
+
+
+  .navbar {
+
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+
+  }
+
+
+  .logo {
+
+    width: 180px;
+
+  }
+
+  .menu {
+
+    width: auto;
+
+    justify-content: flex-end;
+
+    flex-wrap: nowrap;
+
+    gap: 2rem;
+
+  }
+  .menu a {
+
+    font-size: 1rem;
+
+  }
+
+  /* HERO */
+
+  .hero {
+
+    min-height: calc(100vh - 100px);
+
+    padding: 70px 0;
+
+  }
+
+  .hero-texto h1 {
+
+    font-size: clamp(3rem, 7vw, 6rem);
+
+    letter-spacing: -2px;
+
+  }
+  .hero-descripcion {
+
+    font-size: clamp(1rem, 2vw, 1.25rem);
+
+  }
+  /* SECCIONES */
+
+  section {
+
+    padding: 80px 0;
+
+  }
+
+  /* DÍA 7 - GRID */
+
+  .tarjetas {
+
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+    gap: 30px;
+
+  }
+
+}
+/* ==============================================
+   PANTALLAS GRANDES
+================================================ */
+
+@media (min-width: 1200px) {
+
+  .hero-texto {
+
+    max-width: 650px;
+
+  }
+
+}
+/* ==============================================
+   DÍA 10
+   ACCESIBILIDAD Y CIERRE RESPONSIVE
+================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+
+    scroll-behavior: auto;
+
+  }
+
+  *,
+  *::before,
+  *::after {
+
+    transition-duration: 0.01ms !important;
+
+    animation-duration: 0.01ms !important;
+
+  }
+
 }

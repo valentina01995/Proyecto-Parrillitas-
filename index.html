@@ -1,58 +1,324 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Parrillitas CR: parrillas pequeñas y portátiles elaboradas con cilindros reutilizados de aire acondicionado."
+  >
+
   <title>Parrillitas CR</title>
+
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+
+  <!-- =========================================
+       DÍA 1
+       HTML5 SEMÁNTICO
+       Encabezado y navegación
+  ========================================== -->
+
   <header class="encabezado">
-    <h1>Parrillitas CR</h1>
-    <nav class="menu">
-      <a href="#inicio">Inicio</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
+
+    <div class="navbar">
+
+      <a
+        href="#inicio"
+        class="logo-enlace"
+        aria-label="Ir al inicio"
+      >
+        <img
+          src="img/logo-parrillitas-cr.webp"
+          alt="Logo de Parrillitas CR"
+          class="logo"
+        >
+      </a>
+
+      <!-- =========================================
+           DÍA 2
+           NAVEGACIÓN HACIA LAS 4 SECCIONES
+
+           DÍA 6
+           NAVEGACIÓN CON FLEXBOX
+      ========================================== -->
+
+      <nav class="menu" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+    </div>
+
   </header>
 
+
+  <!-- =========================================
+       CONTENIDO PRINCIPAL
+  ========================================== -->
+
   <main>
-    <section id="inicio">
-      <h1>Parrillitas CR</h1>
-      <p>Parrillas pequeñas, prácticas y portátiles para disfrutar donde quieras.</p>
-      <a href="#servicios" class="boton">Ver parrillas</a>
+
+    <!-- =========================================
+         DÍA 2
+         SECCIÓN INICIO
+
+         DÍA 5
+         HERO CON H1 Y P
+    ========================================== -->
+
+    <section id="inicio" class="hero">
+
+      <div class="hero-contenido">
+
+        <div class="hero-texto">
+
+          <p class="hero-subtitulo">
+            PEQUEÑAS PARRILLAS
+          </p>
+
+          <h1>
+            GRANDES
+            <span>MOMENTOS</span>
+          </h1>
+
+          <p class="hero-descripcion">
+            Parrillas portátiles hechas con cilindros de aire
+            acondicionado, ideales para llevar tu pasión por
+            el asado a cualquier lugar.
+          </p>
+
+          <a href="#servicios" class="boton">
+            Conoce nuestras parrillas →
+          </a>
+
+        </div>
+
+      </div>
+
     </section>
+
+
+    <!-- =========================================
+         DÍA 2
+         SECCIÓN NOSOTROS
+    ========================================== -->
 
     <section id="nosotros">
-      <h2>Nosotros</h2>
-      <p>En Parrillitas CR elaboramos parrillas pequeñas y portátiles utilizando cilindros reutilizados de sistemas de aire acondicionado.</p>
-      <p>Son ideales para viajes, paseos, camping, playa y actividades al aire libre.</p>
+
+      <div class="contenedor">
+
+        <h2>Nosotros</h2>
+
+        <p>
+          En Parrillitas CR elaboramos parrillas pequeñas y
+          portátiles utilizando cilindros reutilizados de
+          sistemas de aire acondicionado.
+        </p>
+
+        <p>
+          Buscamos crear una opción práctica para disfrutar
+          de una buena parrillada en diferentes lugares.
+        </p>
+
+        <p>
+          Son ideales para viajes, paseos, camping, playa
+          y actividades al aire libre.
+        </p>
+
+      </div>
+
     </section>
+
+
+    <!-- =========================================
+         DÍA 2
+         SECCIÓN SERVICIOS
+
+         DÍA 7
+         TARJETAS CON CSS GRID
+    ========================================== -->
 
     <section id="servicios">
-      <h2>Nuestras parrillas</h2>
-      <div class="tarjeta">
-        <h3>Parrilla portátil</h3>
-        <p>Compacta, práctica y fácil de transportar.</p>
+
+      <div class="contenedor">
+
+        <h2>Nuestras parrillas</h2>
+
+        <p>
+          Pequeñas, prácticas y pensadas para acompañarte
+          en tus mejores momentos.
+        </p>
+
+
+        <div class="tarjetas">
+
+          <article class="tarjeta">
+
+            <h3>Parrilla portátil</h3>
+
+            <p>
+              Compacta, práctica y fácil de transportar.
+              Ideal para paseos y actividades al aire libre.
+            </p>
+
+          </article>
+
+
+          <article class="tarjeta">
+
+            <h3>Diseño reutilizado</h3>
+
+            <p>
+              Elaborada aprovechando cilindros de sistemas
+              de aire acondicionado y dándoles un nuevo uso.
+            </p>
+
+          </article>
+
+
+          <article class="tarjeta">
+
+            <h3>Para tus paseos</h3>
+
+            <p>
+              Una opción práctica para camping, playa,
+              reuniones familiares y diferentes actividades.
+            </p>
+
+          </article>
+
+        </div>
+
       </div>
+
     </section>
+
+
+    <!-- =========================================
+         DÍA 2
+         SECCIÓN CONTACTO
+    ========================================== -->
 
     <section id="contacto">
-      <h2>Contacto</h2>
-      <p>¿Deseas información sobre nuestras parrillas?</p>
-      <form>
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre">
-        <label for="correo">Correo electrónico</label>
-        <input type="email" id="correo" name="correo">
-        <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje"></textarea>
-        <button type="submit">Enviar</button>
-      </form>
+
+      <div class="contenedor">
+
+        <h2>Contacto</h2>
+
+        <p>
+          ¿Deseas información sobre nuestras parrillas?
+          Envíanos un mensaje.
+        </p>
+
+
+        <form action="#" method="post">
+
+          <div class="campo">
+
+            <label for="nombre">
+              Nombre
+            </label>
+
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              autocomplete="name"
+              required
+            >
+
+          </div>
+
+
+          <div class="campo">
+
+            <label for="correo">
+              Correo electrónico
+            </label>
+
+            <input
+              type="email"
+              id="correo"
+              name="correo"
+              autocomplete="email"
+              required
+            >
+
+          </div>
+
+
+          <div class="campo">
+
+            <label for="mensaje">
+              Mensaje
+            </label>
+
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="5"
+              required
+            ></textarea>
+
+          </div>
+
+
+          <button type="submit" class="btn">
+            Enviar mensaje
+          </button>
+
+        </form>
+
+      </div>
+
     </section>
+
   </main>
 
-  <footer><p>© 2026 Parrillitas CR</p></footer>
+
+  <!-- =========================================
+       DÍA 1
+       HTML5 SEMÁNTICO
+       PIE DE PÁGINA
+  ========================================== -->
+
+  <footer>
+
+    <div class="contenedor">
+
+      <p>
+        © 2026 Parrillitas CR
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================
+       DÍA 10
+       VALIDACIÓN Y PRUEBAS FINALES
+
+       - Validación HTML
+       - Validación CSS
+       - Navegación interna
+       - Pruebas responsive
+       - Navegación con teclado
+       - Foco visible
+       - Revisión de imágenes y textos
+  ========================================== -->
+
 </body>
+
 </html>
