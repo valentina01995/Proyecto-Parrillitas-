@@ -44,14 +44,32 @@
       </a>
 
       <!-- =========================================
-           DÍA 2
-           NAVEGACIÓN HACIA LAS 4 SECCIONES
-
-           DÍA 6
-           NAVEGACIÓN CON FLEXBOX
+           DÍA 13
+           BOTÓN ACCESIBLE PARA ABRIR Y CERRAR
+           EL MENÚ EN PANTALLAS PEQUEÑAS
       ========================================== -->
 
-      <nav class="menu" aria-label="Navegación principal">
+      <button
+        type="button"
+        class="menu-toggle"
+        aria-controls="menu-principal"
+        aria-expanded="false"
+        hidden
+      >
+        Menú
+      </button>
+
+      <!-- =========================================
+           DÍA 2: ENLACES A LAS CUATRO SECCIONES
+           DÍA 6: NAVEGACIÓN CON FLEXBOX
+           DÍA 13: IDENTIFICADOR DEL MENÚ
+      ========================================== -->
+
+      <nav
+        id="menu-principal"
+        class="menu"
+        aria-label="Navegación principal"
+      >
         <a href="#inicio">Inicio</a>
         <a href="#nosotros">Nosotros</a>
         <a href="#servicios">Servicios</a>
@@ -307,8 +325,9 @@
   ========================================== -->
 
   <!-- =========================================
-       DÍA 12
+       DÍA 12 Y DÍA 13
        ENLACE DEL ARCHIVO JAVASCRIPT
+       SELECCIÓN DEL DOM Y CONTROL DEL MENÚ
   ========================================== -->
 
   <script src="script.js"></script>
