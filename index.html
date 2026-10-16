@@ -22,9 +22,7 @@
 <body>
 
   <!-- =========================================
-       DÍA 1
-       HTML5 SEMÁNTICO
-       Encabezado y navegación
+       DÍA 1: ENCABEZADO SEMÁNTICO
   ========================================== -->
 
   <header class="encabezado">
@@ -44,9 +42,7 @@
       </a>
 
       <!-- =========================================
-           DÍA 13
-           BOTÓN ACCESIBLE PARA ABRIR Y CERRAR
-           EL MENÚ EN PANTALLAS PEQUEÑAS
+           DÍA 13: BOTÓN ACCESIBLE DEL MENÚ
       ========================================== -->
 
       <button
@@ -60,9 +56,9 @@
       </button>
 
       <!-- =========================================
-           DÍA 2: ENLACES A LAS CUATRO SECCIONES
+           DÍA 2: ENLACES A LAS SECCIONES
            DÍA 6: NAVEGACIÓN CON FLEXBOX
-           DÍA 13: IDENTIFICADOR DEL MENÚ
+           DÍA 13: MENÚ DESPLEGABLE
       ========================================== -->
 
       <nav
@@ -87,11 +83,8 @@
   <main>
 
     <!-- =========================================
-         DÍA 2
-         SECCIÓN INICIO
-
-         DÍA 5
-         HERO CON H1 Y P
+         DÍA 2: SECCIÓN INICIO
+         DÍA 5: HERO CON H1 Y P
     ========================================== -->
 
     <section id="inicio" class="hero">
@@ -126,8 +119,7 @@
     </section>
 
     <!-- =========================================
-         DÍA 2
-         SECCIÓN NOSOTROS
+         DÍA 2: SECCIÓN NOSOTROS
     ========================================== -->
 
     <section id="nosotros">
@@ -157,11 +149,8 @@
     </section>
 
     <!-- =========================================
-         DÍA 2
-         SECCIÓN SERVICIOS
-
-         DÍA 7
-         TARJETAS CON CSS GRID
+         DÍA 2: SECCIÓN SERVICIOS
+         DÍA 7: TARJETAS CON CSS GRID
     ========================================== -->
 
     <section id="servicios">
@@ -217,8 +206,7 @@
     </section>
 
     <!-- =========================================
-         DÍA 2
-         SECCIÓN CONTACTO
+         DÍA 14: FORMULARIO Y VALIDACIÓN
     ========================================== -->
 
     <section id="contacto">
@@ -229,15 +217,26 @@
 
         <p>
           ¿Deseas información sobre nuestras parrillas?
-          Envíanos un mensaje.
+          Completa el formulario.
         </p>
 
-        <form action="#" method="post">
+        <p id="indicaciones-formulario">
+          Todos los campos son obligatorios. Este formulario
+          es de práctica: valida los datos, pero todavía no
+          envía mensajes.
+        </p>
+
+        <form
+          id="formulario-contacto"
+          action="#"
+          method="post"
+          aria-describedby="indicaciones-formulario"
+        >
 
           <div class="campo">
 
             <label for="nombre">
-              Nombre
+              Nombre (obligatorio)
             </label>
 
             <input
@@ -245,15 +244,22 @@
               id="nombre"
               name="nombre"
               autocomplete="name"
+              aria-describedby="error-nombre"
               required
             >
+
+            <p
+              id="error-nombre"
+              class="error-campo"
+              aria-live="polite"
+            ></p>
 
           </div>
 
           <div class="campo">
 
             <label for="correo">
-              Correo electrónico
+              Correo electrónico (obligatorio)
             </label>
 
             <input
@@ -261,29 +267,55 @@
               id="correo"
               name="correo"
               autocomplete="email"
+              aria-describedby="ayuda-correo error-correo"
               required
             >
+
+            <p id="ayuda-correo" class="ayuda-campo">
+              Usa un formato como nombre@ejemplo.com.
+            </p>
+
+            <p
+              id="error-correo"
+              class="error-campo"
+              aria-live="polite"
+            ></p>
 
           </div>
 
           <div class="campo">
 
             <label for="mensaje">
-              Mensaje
+              Mensaje (obligatorio)
             </label>
 
             <textarea
               id="mensaje"
               name="mensaje"
               rows="5"
+              aria-describedby="error-mensaje"
               required
             ></textarea>
+
+            <p
+              id="error-mensaje"
+              class="error-campo"
+              aria-live="polite"
+            ></p>
 
           </div>
 
           <button type="submit" class="btn">
-            Enviar mensaje
+            Validar formulario
           </button>
+
+          <p
+            id="estado-formulario"
+            class="estado-formulario"
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
+          ></p>
 
         </form>
 
@@ -294,9 +326,7 @@
   </main>
 
   <!-- =========================================
-       DÍA 1
-       HTML5 SEMÁNTICO
-       PIE DE PÁGINA
+       DÍA 1: PIE DE PÁGINA SEMÁNTICO
   ========================================== -->
 
   <footer>
@@ -312,8 +342,7 @@
   </footer>
 
   <!-- =========================================
-       DÍA 10
-       VALIDACIÓN Y PRUEBAS FINALES
+       DÍA 10: VALIDACIÓN Y PRUEBAS FINALES
 
        - Validación HTML
        - Validación CSS
@@ -325,9 +354,8 @@
   ========================================== -->
 
   <!-- =========================================
-       DÍA 12 Y DÍA 13
-       ENLACE DEL ARCHIVO JAVASCRIPT
-       SELECCIÓN DEL DOM Y CONTROL DEL MENÚ
+       DÍAS 12, 13 Y 14
+       JAVASCRIPT: DOM, MENÚ Y FORMULARIO
   ========================================== -->
 
   <script src="script.js"></script>

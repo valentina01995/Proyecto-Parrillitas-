@@ -1,7 +1,7 @@
 /*
 ================================================
 PARRILLITAS CR
-PROYECTO ACUMULATIVO - DÍAS 1 AL 13
+PROYECTO ACUMULATIVO - DÍAS 1 AL 14
 ================================================
 */
 
@@ -462,6 +462,69 @@ form .btn {
 }
 
 /* ==============================================
+   DÍA 14: VALIDACIÓN DEL FORMULARIO
+================================================ */
+
+/* Indicaciones y ayuda para completar los campos. */
+
+#indicaciones-formulario,
+#contacto .ayuda-campo {
+  color: var(--color-gris);
+  font-size: 0.95rem;
+}
+
+#contacto .ayuda-campo {
+  margin: 0;
+}
+
+/* Mensajes de error junto a cada campo. */
+
+#contacto .error-campo {
+  margin: 0;
+  color: #ffb4ab;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+/* Ocultar los espacios de mensajes cuando están vacíos. */
+
+.error-campo:empty,
+.estado-formulario:empty {
+  display: none;
+}
+
+/* Campos que necesitan corrección. */
+
+input[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border: 2px solid #ffb4ab;
+}
+
+/* Foco visible en los campos con error. */
+
+input[aria-invalid="true"]:focus,
+textarea[aria-invalid="true"]:focus {
+  outline: 2px solid #ffb4ab;
+  outline-offset: 3px;
+}
+
+/* Resultado general de la validación. */
+
+#contacto .estado-formulario {
+  margin: 0;
+  padding: 16px;
+
+  border-left: 4px solid var(--color-turquesa);
+  border-radius: 8px;
+
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+/* ==============================================
    FOOTER
 ================================================ */
 
@@ -507,7 +570,7 @@ footer p {
     width: 180px;
   }
 
-  /* DÍA 13: enlaces visibles en computadora */
+  /* DÍA 13: enlaces visibles en computadora. */
 
   .menu-toggle {
     display: none;
