@@ -23,3 +23,16 @@ Este repositorio registra los archivos y cambios realizados durante el curso.
 
 ## Autora
 Valentina Zúñiga Barrantes
+
+## Comportamiento JavaScript incorporado
+
+## Día 15: comportamiento del formulario
+
+El formulario valida nombre, correo y mensaje sin recargar la página.
+Muestra errores claros que desaparecen al corregir los campos y confirma
+la validación únicamente cuando todos los datos son correctos.
+
+Se probó con teclado y en pantalla pequeña, y se revisó la consola.
+
+El formulario es de práctica: no envía mensajes y conserva los datos
+después de validarlos.
